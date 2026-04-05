@@ -97,6 +97,15 @@
 </head>
 <body class="antialiased selection:bg-ink selection:text-parchment">
 
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-[9999] pointer-events-none">
+        <a href="https://wa.me/5541992842010" target="_blank" class="group pointer-events-auto block transform-gpu" aria-label="Fale conosco pelo WhatsApp">
+            <div class="relative bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 border-2 border-white/20">
+                <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-9 md:h-9 fill-current"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.065-.301-.15-1.265-.462-2.406-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.21 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.195-.572-.345z"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.846.5 3.584 1.385 5.073L2 22l5.09-1.317C8.51 21.53 10.207 22 12 22z"></path></svg>
+            </div>
+        </a>
+    </div>
+
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
         <div class="glass mx-auto max-w-7xl mt-4 rounded-2xl px-6 py-4 flex justify-between items-center">
@@ -522,13 +531,19 @@
             stagger: 0.1,
             ease: "power2.out"
         });
-    </script>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5541992842010" target="_blank" class="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-[9999] group" aria-label="Fale conosco pelo WhatsApp">
-        <div class="relative bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 border-2 border-white/20">
-            <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-9 md:h-9 fill-current"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.065-.301-.15-1.265-.462-2.406-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.21 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.195-.572-.345z"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.846.5 3.584 1.385 5.073L2 22l5.09-1.317C8.51 21.53 10.207 22 12 22z"></path></svg>
-        </div>
-    </a>
+        // Ensure WhatsApp button is visible and correctly positioned
+        gsap.from(".fixed.bottom-8", {
+            opacity: 0,
+            scale: 0.5,
+            duration: 0.8,
+            delay: 1,
+            ease: "back.out(1.7)"
+        });
+
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+        });
+    </script>
 </body>
 </html>
