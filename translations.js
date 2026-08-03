@@ -1,0 +1,237 @@
+const translations = {
+    pt: {
+        "nav-quem-somos": "Quem Somos",
+        "nav-distintivos": "Distintivos",
+        "nav-crencas": "No Que Cremos",
+        "nav-visite-nos": "Visite-nos",
+        "hero-title": "Reunidos unicamente aO precioso Nome dO Senhor Jesus Cristo.",
+        "hero-subtitle": "Uma igreja local, independente e sem denominação, que tem a Bíblia Sagrada como única regra de fé e segue O único bom, grande e supremo Pastor, Jesus Cristo.",
+        "hero-btn-principios": "Conheça Nossos Princípios",
+        "hero-btn-visite": "Visite-nos",
+        "mq-1": "Um Só Corpo",
+        "mq-2": "Um Só Espírito",
+        "mq-3": "Uma Só Esperança da Vossa Vocação",
+        "mq-4": "Um Só Senhor",
+        "mq-5": "Uma Só Fé",
+        "mq-6": "Um Só Batismo",
+        "mq-7": "Um Só Deus e Pai de Todos",
+        "mq-8": "A Bíblia como Única Regra",
+        "qs-title": "Por Que Não Temos um Nome e Quem Somos?",
+        "qs-subtitle": "É comum ouvirmos a pergunta: \"Qual é o nome da sua igreja?\". Quando respondemos que não adotamos nenhum nome denominacional, muitos ficam surpresos. Fazemos isso por três motivos principais:",
+        "qs-card1-title": "Exemplo Bíblico",
+        "qs-card1-desc": "No Novo Testamento, as congregações eram chamadas apenas de \"igrejas\" (ou \"igrejas de Deus\" e \"igrejas de Cristo\"), muitas vezes descritas apenas por sua localização geográfica. Não vamos além do que está escrito.",
+        "qs-card2-title": "O Precioso Nome de Jesus",
+        "qs-card2-desc": "Cremos que devemos nos reunir em torno dO Nome de Cristo, que foi elevado acima de todo nome. O Seu Nome basta para nós e temos prazer em ser conhecidos simplesmente como \"cristãos\".",
+        "qs-card3-title": "Unidade do Corpo",
+        "qs-card3-desc": "Deus odeia as contendas e divisões. Acreditamos que o denominacionalismo é uma obra da carne que divide o povo de Deus, e o desejo dO Senhor é que Seus filhos sejam um só corpo, unidos pelo Espírito.",
+        "qs-card4-title": "Quem Somos",
+        "qs-card4-desc": "Somos pecadores que se arrependeram de seus pecados e aceitaram O Senhor Jesus como seu único e suficiente Salvador. Reunimo-nos em um local para a realização de orações, cânticos e salmos aO Senhor em nosso coração, bem como para o estudo da Palavra e a pregação do Evangelho.",
+        "dist-title": "Nossas Características Bíblicas e Distintivos",
+        "dist-1-title": "Igreja Independente e Autônoma",
+        "dist-1-desc": "Cada congregação governa a si mesma, sem responder a uma sede central. O governo é exercido exclusivamente pelos anciãos (também chamados de bispos e presbíteros) da própria igreja local.",
+        "dist-2-title": "Sem Hierarquia Eclesiástica",
+        "dist-2-desc": "Desconhecemos autoridades como pastores, papas, cardeais, arcebispos, padres ou presidentes, não possuindo clero, pois a liderança é baseada em uma pluralidade de anciãos.",
+        "dist-3-title": "Comunhão Espiritual",
+        "dist-3-desc": "Embora independentes, mantemos união espiritual com outras igrejas baseada na salvação comum, aceitando a todos quantos Cristo recebeu e colaborando na proclamação do Evangelho.",
+        "dist-4-title": "Simplicidade Bíblica",
+        "dist-4-desc": "Nos reunimos na simplicidade que a Bíblia exige, seguindo o padrão do Novo Testamento para as reuniões da igreja, sem liturgias complexas.",
+        "dist-5-title": "Sem Cobrança de Dízimo",
+        "dist-5-desc": "Entendemos na Bíblia que a igreja não deve cobrar dízimo, nem mesmo vender objetos ou algo para adquirir lucro financeiro. As contribuições são feitas de forma voluntária e conforme o propósito do coração de cada crente, sob a graça, que são chamadas pelo Novo Testamento de ofertas.",
+        "crencas-title": "Nossas Verdades Fundamentais",
+        "crencas-subtitle": "Uma declaração de fé baseada unicamente nas Escrituras Sagradas.",
+        "cb-1-title": "A Bíblia Sagrada",
+        "cb-1-desc": "É a Palavra de Deus, verbalmente inspirada, infalível e nossa única fonte de revelação e autoridade divina.",
+        "cb-2-title": "A Trindade",
+        "cb-2-desc": "Cremos em um só Deus, eternamente existente em três Pessoas distintas: o Pai, o Filho e o Espírito Santo.",
+        "cb-3-title": "Jesus Cristo",
+        "cb-3-desc": "É plenamente Deus e plenamente Homem. Viveu sem pecado, morreu na cruz para expiar nossos pecados, ressuscitou corporalmente, ascendeu ao Céu e voltará em breve.",
+        "cb-4-title": "Salvação pela Graça",
+        "cb-4-desc": "Toda pessoa é pecadora e precisa de salvação. A salvação é um dom gratuito de Deus, obtida exclusivamente pelo arrependimento dos pecados e pela fé nO Senhor Jesus Cristo, não por obras ou religiosidade da pessoa em si.",
+        "cb-5-title": "Batismo e Ceia",
+        "cb-5-desc": "Praticamos o batismo por imersão para os crentes já salvos. Celebramos a Ceia dO Senhor como nossa reunião de adoração aO Senhor Jesus por excelência em Sua memória.",
+        "cb-6-title": "O Destino Eterno",
+        "cb-6-desc": "Cremos na ressurreição de todos os homens; os salvos para a vida eterna e os perdidos para a condenação eterna.",
+        "ft-title": "Junte-se a nós",
+        "ft-desc": "Todos os verdadeiros crentes, salvos pela fé em Cristo, formam uma unidade indivisível (a Igreja). Gostaríamos muito de ter você adorando a Deus em comunhão conosco!",
+        "ft-btn-whats": "Fale conosco pelo WhatsApp",
+        "ft-horarios-title": "Horários das Reuniões",
+        "ft-horario-1": "Sábado, 19:30 - Oração e estudo bíblico",
+        "ft-horario-2": "Domingo, 09:00 - Ceia dO Senhor",
+        "ft-horario-3": "Domingo, 10:30 - Pregação da Palavra",
+        "ft-endereco-title": "Endereço",
+        "ft-endereco-1": "R. Arcésio de Barros Lima, 916",
+        "ft-endereco-2": "Tatuquara, Curitiba - PR",
+        "ft-contato-title": "Contato",
+        "ft-contato-ou": "ou clique no ícone do Whatsapp",
+        "ft-copyright": "© 2026 Igreja Local. Todos os direitos reservados."
+    },
+    es: {
+        "nav-quem-somos": "Quiénes Somos",
+        "nav-distintivos": "Distintivos",
+        "nav-crencas": "En Qué Creemos",
+        "nav-visite-nos": "Visítanos",
+        "hero-title": "Reunidos únicamente al precioso Nombre del Señor Jesucristo.",
+        "hero-subtitle": "Una iglesia local, independiente y sin denominación, que tiene la Santa Biblia como única regla de fe y sigue al único buen, gran y supremo Pastor, Jesucristo.",
+        "hero-btn-principios": "Conoce Nuestros Principios",
+        "hero-btn-visite": "Visítanos",
+        "mq-1": "Un Solo Cuerpo",
+        "mq-2": "Un Solo Espíritu",
+        "mq-3": "Una Sola Esperanza de Vuestra Vocación",
+        "mq-4": "Un Solo Señor",
+        "mq-5": "Una Sola Fe",
+        "mq-6": "Un Solo Bautismo",
+        "mq-7": "Un Solo Dios y Padre de Todos",
+        "mq-8": "La Biblia como Única Regla",
+        "qs-title": "¿Por Qué No Tenemos un Nombre y Quiénes Somos?",
+        "qs-subtitle": "Es común que nos pregunten: \"¿Cuál es el nombre de su iglesia?\". Cuando respondemos que no adoptamos ningún nombre denominacional, muchos se sorprenden. Hacemos esto por tres motivos principales:",
+        "qs-card1-title": "Ejemplo Bíblico",
+        "qs-card1-desc": "En el Nuevo Testamento, las congregaciones eran llamadas simplemente \"iglesias\" (o \"iglesias de Dios\" e \"iglesias de Cristo\"), muchas veces descritas solo por su ubicación geográfica. No vamos más allá de lo que está escrito.",
+        "qs-card2-title": "El Precioso Nombre de Jesús",
+        "qs-card2-desc": "Creemos que debemos reunirnos en torno al Nombre de Cristo, que fue exaltado sobre todo nombre. Su Nombre nos basta y tenemos el placer de ser conocidos simplemente como \"cristianos\".",
+        "qs-card3-title": "Unidad del Cuerpo",
+        "qs-card3-desc": "Dios odia las contiendas y divisiones. Creemos que el denominacionalismo es una obra de la carne que divide al pueblo de Dios, y el deseo del Señor es que Sus hijos sean un solo cuerpo, unidos por el Espíritu.",
+        "qs-card4-title": "Quiénes Somos",
+        "qs-card4-desc": "Somos pecadores que se han arrepentido de sus pecados y han aceptado al Señor Jesús como su único y suficiente Salvador. Nos reunimos en un local para realizar oraciones, cánticos y salmos al Señor en nuestro corazón, así como para el estudio de la Palabra y la predicación del Evangelio.",
+        "dist-title": "Nuestras Características Bíblicas y Distintivos",
+        "dist-1-title": "Iglesia Independiente y Autónoma",
+        "dist-1-desc": "Cada congregación se gobierna a sí misma, sin responder a una sede central. El gobierno es ejercido exclusivamente por los ancianos (también llamados obispos y presbíteros) de la propia iglesia local.",
+        "dist-2-title": "Sin Jerarquía Eclesiástica",
+        "dist-2-desc": "Desconocemos autoridades como pastores, papas, cardenales, arzobispos, padres o presidentes, no poseemos clero, ya que el liderazgo se basa en una pluralidad de ancianos.",
+        "dist-3-title": "Comunión Espiritual",
+        "dist-3-desc": "Aunque somos independientes, mantenemos unión espiritual con otras iglesias basada en la salvación común, aceptando a todos los que Cristo ha recibido y colaborando en la proclamación del Evangelio.",
+        "dist-4-title": "Simplicidad Bíblica",
+        "dist-4-desc": "Nos reunimos en la simplicidad que la Biblia exige, siguiendo el patrón del Nuevo Testamento para las reuniones de la iglesia, sin liturgias complejas.",
+        "dist-5-title": "Sin Cobro de Diezmos",
+        "dist-5-desc": "Entendemos por la Biblia que la iglesia no debe cobrar diezmo, ni siquiera vender objetos o algo para adquirir lucro financiero. Las contribuciones se hacen de forma voluntaria y conforme al propósito del corazón de cada creyente, bajo la gracia, que el Nuevo Testamento llama ofrendas.",
+        "crencas-title": "Nuestras Verdades Fundamentales",
+        "crencas-subtitle": "Una declaración de fe basada únicamente en las Sagradas Escrituras.",
+        "cb-1-title": "La Santa Biblia",
+        "cb-1-desc": "Es la Palabra de Dios, verbalmente inspirada, infalible y nuestra única fuente de revelación y autoridad divina.",
+        "cb-2-title": "La Trinidad",
+        "cb-2-desc": "Creemos en un solo Dios, eternamente existente en tres Personas distintas: el Padre, el Hijo y el Espíritu Santo.",
+        "cb-3-title": "Jesucristo",
+        "cb-3-desc": "Es plenamente Dios y plenamente Hombre. Vivió sin pecado, murió en la cruz para expiar nuestros pecados, resucitó corporalmente, ascendió al Cielo y volverá pronto.",
+        "cb-4-title": "Salvación por Gracia",
+        "cb-4-desc": "Toda persona es pecadora y necesita salvación. La salvación es un don gratuito de Dios, obtenida exclusivamente por el arrepentimiento de los pecados y por la fe en el Señor Jesucristo, no por obras o religiosidad de la persona en sí.",
+        "cb-5-title": "Bautismo y Cena",
+        "cb-5-desc": "Practicamos el bautismo por inmersión para los creyentes ya salvos. Celebramos la Cena del Señor como nuestra reunión de adoración al Señor Jesús por excelencia en Su memoria.",
+        "cb-6-title": "El Destino Eterno",
+        "cb-6-desc": "Creemos en la resurrección de todos los hombres; los salvos para la vida eterna y los perdidos para la condenación eterna.",
+        "ft-title": "Únete a nosotros",
+        "ft-desc": "Todos los verdaderos creyentes, salvos por la fe en Cristo, forman una unidad indivisible (la Iglesia). ¡Nos encantaría tenerte adorando a Dios en comunión con nosotros!",
+        "ft-btn-whats": "Contáctanos por WhatsApp",
+        "ft-horarios-title": "Horarios de las Reuniones",
+        "ft-horario-1": "Sábado, 19:30 - Oración y estudio bíblico",
+        "ft-horario-2": "Domingo, 09:00 - Cena del Señor",
+        "ft-horario-3": "Domingo, 10:30 - Predicación de la Palabra",
+        "ft-endereco-title": "Dirección",
+        "ft-endereco-1": "R. Arcésio de Barros Lima, 916",
+        "ft-endereco-2": "Tatuquara, Curitiba - PR",
+        "ft-contato-title": "Contacto",
+        "ft-contato-ou": "o haz clic en el ícono de Whatsapp",
+        "ft-copyright": "© 2026 Iglesia Local. Todos los derechos reservados."
+    },
+    en: {
+        "nav-quem-somos": "Who We Are",
+        "nav-distintivos": "Distinctives",
+        "nav-crencas": "What We Believe",
+        "nav-visite-nos": "Visit Us",
+        "hero-title": "Gathered only to the precious Name of the Lord Jesus Christ.",
+        "hero-subtitle": "A local, independent, and non-denominational church, holding the Holy Bible as the only rule of faith and following the only good, great, and supreme Shepherd, Jesus Christ.",
+        "hero-btn-principios": "Know Our Principles",
+        "hero-btn-visite": "Visit Us",
+        "mq-1": "One Body",
+        "mq-2": "One Spirit",
+        "mq-3": "One Hope of Your Calling",
+        "mq-4": "One Lord",
+        "mq-5": "One Faith",
+        "mq-6": "One Baptism",
+        "mq-7": "One God and Father of All",
+        "mq-8": "The Bible as the Only Rule",
+        "qs-title": "Why We Don't Have a Name and Who We Are?",
+        "qs-subtitle": "It is common to hear the question: \"What is the name of your church?\". When we answer that we do not adopt any denominational name, many are surprised. We do this for three main reasons:",
+        "qs-card1-title": "Biblical Example",
+        "qs-card1-desc": "In the New Testament, congregations were simply called \"churches\" (or \"churches of God\" and \"churches of Christ\"), often described only by their geographical location. We do not go beyond what is written.",
+        "qs-card2-title": "The Precious Name of Jesus",
+        "qs-card2-desc": "We believe that we should gather around the Name of Christ, which is exalted above every name. His Name is enough for us and we are pleased to be known simply as \"Christians\".",
+        "qs-card3-title": "Unity of the Body",
+        "qs-card3-desc": "God hates strife and divisions. We believe that denominationalism is a work of the flesh that divides God's people, and the Lord's desire is for His children to be one body, united by the Spirit.",
+        "qs-card4-title": "Who We Are",
+        "qs-card4-desc": "We are sinners who have repented of our sins and accepted the Lord Jesus as our only and sufficient Savior. We gather in a place for prayers, hymns, and spiritual songs to the Lord in our hearts, as well as for the study of the Word and the preaching of the Gospel.",
+        "dist-title": "Our Biblical Characteristics and Distinctives",
+        "dist-1-title": "Independent and Autonomous Church",
+        "dist-1-desc": "Each congregation governs itself, without answering to a central headquarters. The government is exercised exclusively by the elders (also called bishops and presbyters) of the local church itself.",
+        "dist-2-title": "No Ecclesiastical Hierarchy",
+        "dist-2-desc": "We do not recognize authorities such as pastors, popes, cardinals, archbishops, priests, or presidents, having no clergy, as leadership is based on a plurality of elders.",
+        "dist-3-title": "Spiritual Fellowship",
+        "dist-3-desc": "Although independent, we maintain spiritual unity with other churches based on common salvation, accepting all whom Christ has received and collaborating in the proclamation of the Gospel.",
+        "dist-4-title": "Biblical Simplicity",
+        "dist-4-desc": "We gather in the simplicity that the Bible requires, following the New Testament pattern for church meetings, without complex liturgies.",
+        "dist-5-title": "No Tithing Collection",
+        "dist-5-desc": "We understand from the Bible that the church should not collect tithes, nor even sell objects or anything to acquire financial profit. Contributions are made voluntarily and according to the purpose of each believer's heart, under grace, which the New Testament calls offerings.",
+        "crencas-title": "Our Fundamental Truths",
+        "crencas-subtitle": "A declaration of faith based solely on the Holy Scriptures.",
+        "cb-1-title": "The Holy Bible",
+        "cb-1-desc": "It is the Word of God, verbally inspired, infallible, and our only source of revelation and divine authority.",
+        "cb-2-title": "The Trinity",
+        "cb-2-desc": "We believe in one God, eternally existent in three distinct Persons: the Father, the Son, and the Holy Spirit.",
+        "cb-3-title": "Jesus Christ",
+        "cb-3-desc": "He is fully God and fully Man. He lived without sin, died on the cross to expiate our sins, resurrected bodily, ascended to Heaven, and will return soon.",
+        "cb-4-title": "Salvation by Grace",
+        "cb-4-desc": "Every person is a sinner and needs salvation. Salvation is a free gift of God, obtained exclusively by repentance from sins and by faith in the Lord Jesus Christ, not by works or personal religiosity.",
+        "cb-5-title": "Baptism and the Lord's Supper",
+        "cb-5-desc": "We practice baptism by immersion for believers who are already saved. We celebrate the Lord's Supper as our preeminent gathering of worship to the Lord Jesus in His memory.",
+        "cb-6-title": "The Eternal Destiny",
+        "cb-6-desc": "We believe in the resurrection of all men; the saved to eternal life and the lost to eternal condemnation.",
+        "ft-title": "Join Us",
+        "ft-desc": "All true believers, saved by faith in Christ, form an indivisible unity (the Church). We would love to have you worshiping God in fellowship with us!",
+        "ft-btn-whats": "Contact us via WhatsApp",
+        "ft-horarios-title": "Meeting Times",
+        "ft-horario-1": "Saturday, 7:30 PM - Prayer and Bible study",
+        "ft-horario-2": "Sunday, 9:00 AM - Lord's Supper",
+        "ft-horario-3": "Sunday, 10:30 AM - Preaching of the Word",
+        "ft-endereco-title": "Address",
+        "ft-endereco-1": "R. Arcésio de Barros Lima, 916",
+        "ft-endereco-2": "Tatuquara, Curitiba - PR",
+        "ft-contato-title": "Contact",
+        "ft-contato-ou": "or click the Whatsapp icon",
+        "ft-copyright": "© 2026 Local Church. All rights reserved."
+    }
+};
+
+function changeLanguage(lang) {
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es-VE' : 'en');
+    
+    // Translate text content
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // Translate aria-labels
+    const ariaElements = document.querySelectorAll('[data-i18n-aria]');
+    ariaElements.forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (translations[lang] && translations[lang][key]) {
+            el.setAttribute('aria-label', translations[lang][key]);
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selector = document.getElementById('lang-selector');
+    if (selector) {
+        selector.addEventListener('change', (e) => {
+            changeLanguage(e.target.value);
+            // Refresh ScrollTrigger after text changes (since heights might change)
+            setTimeout(() => {
+                if (typeof ScrollTrigger !== 'undefined') {
+                    ScrollTrigger.refresh();
+                }
+            }, 100);
+        });
+    }
+});

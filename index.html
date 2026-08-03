@@ -39,6 +39,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Translations -->
+    <script src="translations.js"></script>
+
     <style>
         html, body {
             max-width: 100vw;
@@ -102,7 +105,7 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-[9999] pointer-events-none animate-[bounce_1s_ease-in-out_1.5s_1]">
-        <a href="https://wa.me/5541992842010" target="_blank" class="group pointer-events-auto block" aria-label="Fale conosco pelo WhatsApp">
+        <a href="https://wa.me/5541992842010" target="_blank" class="group pointer-events-auto block" aria-label="Fale conosco pelo WhatsApp" data-i18n-aria="floating-whatsapp-aria">
             <div class="relative bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 border-2 border-white/20">
                 <svg viewBox="0 0 24 24" class="w-8 h-8 md:w-9 md:h-9 fill-current"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.065-.301-.15-1.265-.462-2.406-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.21 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.195-.572-.345z"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.846.5 3.584 1.385 5.073L2 22l5.09-1.317C8.51 21.53 10.207 22 12 22z"></path></svg>
             </div>
@@ -116,13 +119,20 @@
                 CRISTÃOS
             </div>
             <nav class="hidden md:flex gap-8 text-sm font-medium text-ink-light">
-                <a href="#quem-somos" class="hover:text-ink transition-colors">Quem Somos</a>
-                <a href="#distintivos" class="hover:text-ink transition-colors">Distintivos</a>
-                <a href="#crencas" class="hover:text-ink transition-colors">No Que Cremos</a>
+                <a href="#quem-somos" class="hover:text-ink transition-colors" data-i18n="nav-quem-somos">Quem Somos</a>
+                <a href="#distintivos" class="hover:text-ink transition-colors" data-i18n="nav-distintivos">Distintivos</a>
+                <a href="#crencas" class="hover:text-ink transition-colors" data-i18n="nav-crencas">No Que Cremos</a>
             </nav>
-            <a href="#contato" class="bg-ink text-parchment px-6 py-2 rounded-full text-sm font-semibold hover:bg-ink-light transition-colors">
-                Visite-nos
-            </a>
+            <div class="flex items-center gap-4">
+                <select id="lang-selector" class="bg-transparent text-ink-light text-sm font-bold focus:outline-none cursor-pointer">
+                    <option value="pt">PT</option>
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+                <a href="#contato" class="hidden md:inline-block bg-ink text-parchment px-6 py-2 rounded-full text-sm font-semibold hover:bg-ink-light transition-colors" data-i18n="nav-visite-nos">
+                    Visite-nos
+                </a>
+            </div>
         </div>
     </header>
 
@@ -134,17 +144,17 @@
         </div>
         
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-            <h1 class="hero-text font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 pb-4 text-gradient">
+            <h1 class="hero-text font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 pb-4 text-gradient" data-i18n="hero-title">
                 Reunidos unicamente aO precioso Nome dO Senhor Jesus Cristo.
             </h1>
-            <p class="hero-text text-lg md:text-xl text-ink-light mb-10 max-w-2xl mx-auto font-medium">
+            <p class="hero-text text-lg md:text-xl text-ink-light mb-10 max-w-2xl mx-auto font-medium" data-i18n="hero-subtitle">
                 Uma igreja local, independente e sem denominação, que tem a Bíblia Sagrada como única regra de fé e segue O único bom, grande e supremo Pastor, Jesus Cristo.
             </p>
             <div class="hero-text flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#quem-somos" class="glass px-8 py-4 rounded-full text-ink font-semibold hover:bg-ink/5 transition-all flex items-center justify-center gap-2">
-                    Conheça Nossos Princípios <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    <span data-i18n="hero-btn-principios">Conheça Nossos Princípios</span> <i data-lucide="arrow-down" class="w-4 h-4"></i>
                 </a>
-                <a href="#contato" class="bg-ink text-parchment px-8 py-4 rounded-full font-semibold hover:bg-ink-light transition-all shadow-[0_0_30px_rgba(44,40,32,0.15)]">
+                <a href="#contato" class="bg-ink text-parchment px-8 py-4 rounded-full font-semibold hover:bg-ink-light transition-all shadow-[0_0_30px_rgba(44,40,32,0.15)]" data-i18n="hero-btn-visite">
                     Visite-nos
                 </a>
             </div>
@@ -155,39 +165,39 @@
     <div class="py-6 border-y border-ink/10 bg-parchment-dark overflow-hidden">
         <div class="marquee-container">
             <div class="marquee-content flex gap-12 items-center text-sm font-semibold text-ink-light tracking-widest uppercase pr-12">
-                <span>Um Só Corpo</span>
+                <span data-i18n="mq-1">Um Só Corpo</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Espírito</span>
+                <span data-i18n="mq-2">Um Só Espírito</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Uma Só Esperança da Vossa Vocação</span>
+                <span data-i18n="mq-3">Uma Só Esperança da Vossa Vocação</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Senhor</span>
+                <span data-i18n="mq-4">Um Só Senhor</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Uma Só Fé</span>
+                <span data-i18n="mq-5">Uma Só Fé</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Batismo</span>
+                <span data-i18n="mq-6">Um Só Batismo</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Deus e Pai de Todos</span>
+                <span data-i18n="mq-7">Um Só Deus e Pai de Todos</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>A Bíblia como Única Regra</span>
+                <span data-i18n="mq-8">A Bíblia como Única Regra</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
             </div>
             <div class="marquee-content flex gap-12 items-center text-sm font-semibold text-ink-light tracking-widest uppercase pr-12" aria-hidden="true">
-                <span>Um Só Corpo</span>
+                <span data-i18n="mq-1">Um Só Corpo</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Espírito</span>
+                <span data-i18n="mq-2">Um Só Espírito</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Uma Só Esperança da Vossa Vocação</span>
+                <span data-i18n="mq-3">Uma Só Esperança da Vossa Vocação</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Senhor</span>
+                <span data-i18n="mq-4">Um Só Senhor</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Uma Só Fé</span>
+                <span data-i18n="mq-5">Uma Só Fé</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Batismo</span>
+                <span data-i18n="mq-6">Um Só Batismo</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>Um Só Deus e Pai de Todos</span>
+                <span data-i18n="mq-7">Um Só Deus e Pai de Todos</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
-                <span>A Bíblia como Única Regra</span>
+                <span data-i18n="mq-8">A Bíblia como Única Regra</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-ink/30"></span>
             </div>
         </div>
@@ -196,8 +206,8 @@
     <!-- QUEM SOMOS (BENTO GRID) -->
     <section id="quem-somos" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-20 section-header">
-            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink">Por Que Não Temos um Nome e Quem Somos?</h2>
-            <p class="text-ink-light max-w-3xl mx-auto text-lg font-medium">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink" data-i18n="qs-title">Por Que Não Temos um Nome e Quem Somos?</h2>
+            <p class="text-ink-light max-w-3xl mx-auto text-lg font-medium" data-i18n="qs-subtitle">
                 É comum ouvirmos a pergunta: "Qual é o nome da sua igreja?". Quando respondemos que não adotamos nenhum nome denominacional, muitos ficam surpresos. Fazemos isso por três motivos principais:
             </p>
         </div>
@@ -208,8 +218,8 @@
                 <div class="w-12 h-12 bg-ink/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-ink/10">
                     <i data-lucide="book-open" class="text-ink"></i>
                 </div>
-                <h3 class="text-2xl font-display font-bold mb-4 text-ink">Exemplo Bíblico</h3>
-                <p class="text-ink-light leading-relaxed font-medium">
+                <h3 class="text-2xl font-display font-bold mb-4 text-ink" data-i18n="qs-card1-title">Exemplo Bíblico</h3>
+                <p class="text-ink-light leading-relaxed font-medium" data-i18n="qs-card1-desc">
                     No Novo Testamento, as congregações eram chamadas apenas de "igrejas" (ou "igrejas de Deus" e "igrejas de Cristo"), muitas vezes descritas apenas por sua localização geográfica. Não vamos além do que está escrito.
                 </p>
             </div>
@@ -220,8 +230,8 @@
                 <div class="w-12 h-12 bg-ink/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-ink/10">
                     <i data-lucide="crown" class="text-ink"></i>
                 </div>
-                <h3 class="text-2xl font-display font-bold mb-4 text-ink">O Precioso Nome de Jesus</h3>
-                <p class="text-ink-light leading-relaxed font-medium">
+                <h3 class="text-2xl font-display font-bold mb-4 text-ink" data-i18n="qs-card2-title">O Precioso Nome de Jesus</h3>
+                <p class="text-ink-light leading-relaxed font-medium" data-i18n="qs-card2-desc">
                     Cremos que devemos nos reunir em torno dO Nome de Cristo, que foi elevado acima de todo nome. O Seu Nome basta para nós e temos prazer em ser conhecidos simplesmente como "cristãos".
                 </p>
             </div>
@@ -232,8 +242,8 @@
                     <div class="w-12 h-12 bg-ink/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-ink/10">
                         <i data-lucide="users" class="text-ink"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold mb-4 text-ink">Unidade do Corpo</h3>
-                    <p class="text-ink-light leading-relaxed font-medium">
+                    <h3 class="text-2xl font-display font-bold mb-4 text-ink" data-i18n="qs-card3-title">Unidade do Corpo</h3>
+                    <p class="text-ink-light leading-relaxed font-medium" data-i18n="qs-card3-desc">
                         Deus odeia as contendas e divisões. Acreditamos que o denominacionalismo é uma obra da carne que divide o povo de Deus, e o desejo dO Senhor é que Seus filhos sejam um só corpo, unidos pelo Espírito.
                     </p>
                 </div>
@@ -248,8 +258,8 @@
                     <div class="w-12 h-12 bg-ink/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-ink/10">
                         <i data-lucide="heart" class="text-ink"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold mb-4 text-ink">Quem Somos</h3>
-                    <p class="text-ink-light leading-relaxed font-medium">
+                    <h3 class="text-2xl font-display font-bold mb-4 text-ink" data-i18n="qs-card4-title">Quem Somos</h3>
+                    <p class="text-ink-light leading-relaxed font-medium" data-i18n="qs-card4-desc">
                         Somos pecadores que se arrependeram de seus pecados e aceitaram O Senhor Jesus como seu único e suficiente Salvador. Reunimo-nos em um local para a realização de orações, cânticos e salmos aO Senhor em nosso coração, bem como para o estudo da Palavra e a pregação do Evangelho.
                     </p>
                 </div>
@@ -262,7 +272,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="distintivo-text">
-                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-ink">Nossas Características Bíblicas e Distintivos</h2>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-ink" data-i18n="dist-title">Nossas Características Bíblicas e Distintivos</h2>
                     
                     <div class="space-y-10">
                         <div class="flex gap-6">
@@ -272,8 +282,8 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2 text-ink">Igreja Independente e Autônoma</h4>
-                                <p class="text-ink-light leading-relaxed font-medium">Cada congregação governa a si mesma, sem responder a uma sede central. O governo é exercido exclusivamente pelos anciãos (também chamados de bispos e presbíteros) da própria igreja local.</p>
+                                <h4 class="text-xl font-bold mb-2 text-ink" data-i18n="dist-1-title">Igreja Independente e Autônoma</h4>
+                                <p class="text-ink-light leading-relaxed font-medium" data-i18n="dist-1-desc">Cada congregação governa a si mesma, sem responder a uma sede central. O governo é exercido exclusivamente pelos anciãos (também chamados de bispos e presbíteros) da própria igreja local.</p>
                             </div>
                         </div>
 
@@ -284,8 +294,8 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2 text-ink">Sem Hierarquia Eclesiástica</h4>
-                                <p class="text-ink-light leading-relaxed font-medium">Desconhecemos autoridades como pastores, papas, cardeais, arcebispos, padres ou presidentes, não possuindo clero, pois a liderança é baseada em uma pluralidade de anciãos.</p>
+                                <h4 class="text-xl font-bold mb-2 text-ink" data-i18n="dist-2-title">Sem Hierarquia Eclesiástica</h4>
+                                <p class="text-ink-light leading-relaxed font-medium" data-i18n="dist-2-desc">Desconhecemos autoridades como pastores, papas, cardeais, arcebispos, padres ou presidentes, não possuindo clero, pois a liderança é baseada em uma pluralidade de anciãos.</p>
                             </div>
                         </div>
 
@@ -296,8 +306,8 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2 text-ink">Comunhão Espiritual</h4>
-                                <p class="text-ink-light leading-relaxed font-medium">Embora independentes, mantemos união espiritual com outras igrejas baseada na salvação comum, aceitando a todos quantos Cristo recebeu e colaborando na proclamação do Evangelho.</p>
+                                <h4 class="text-xl font-bold mb-2 text-ink" data-i18n="dist-3-title">Comunhão Espiritual</h4>
+                                <p class="text-ink-light leading-relaxed font-medium" data-i18n="dist-3-desc">Embora independentes, mantemos união espiritual com outras igrejas baseada na salvação comum, aceitando a todos quantos Cristo recebeu e colaborando na proclamação do Evangelho.</p>
                             </div>
                         </div>
 
@@ -308,8 +318,8 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2 text-ink">Simplicidade Bíblica</h4>
-                                <p class="text-ink-light leading-relaxed font-medium">Nos reunimos na simplicidade que a Bíblia exige, seguindo o padrão do Novo Testamento para as reuniões da igreja, sem liturgias complexas.</p>
+                                <h4 class="text-xl font-bold mb-2 text-ink" data-i18n="dist-4-title">Simplicidade Bíblica</h4>
+                                <p class="text-ink-light leading-relaxed font-medium" data-i18n="dist-4-desc">Nos reunimos na simplicidade que a Bíblia exige, seguindo o padrão do Novo Testamento para as reuniões da igreja, sem liturgias complexas.</p>
                             </div>
                         </div>
 
@@ -320,8 +330,8 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2 text-ink">Sem Cobrança de Dízimo</h4>
-                                <p class="text-ink-light leading-relaxed font-medium">Entendemos na Bíblia que a igreja não deve cobrar dízimo, nem mesmo vender objetos ou algo para adquirir lucro financeiro. As contribuições são feitas de forma voluntária e conforme o propósito do coração de cada crente, sob a graça, que são chamadas pelo Novo Testamento de ofertas.</p>
+                                <h4 class="text-xl font-bold mb-2 text-ink" data-i18n="dist-5-title">Sem Cobrança de Dízimo</h4>
+                                <p class="text-ink-light leading-relaxed font-medium" data-i18n="dist-5-desc">Entendemos na Bíblia que a igreja não deve cobrar dízimo, nem mesmo vender objetos ou algo para adquirir lucro financeiro. As contribuições são feitas de forma voluntária e conforme o propósito do coração de cada crente, sob a graça, que são chamadas pelo Novo Testamento de ofertas.</p>
                             </div>
                         </div>
                     </div>
@@ -337,8 +347,8 @@
     <!-- NO QUE CREMOS -->
     <section id="crencas" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-20 section-header">
-            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink">Nossas Verdades Fundamentais</h2>
-            <p class="text-ink-light max-w-2xl mx-auto text-lg font-medium">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink" data-i18n="crencas-title">Nossas Verdades Fundamentais</h2>
+            <p class="text-ink-light max-w-2xl mx-auto text-lg font-medium" data-i18n="crencas-subtitle">
                 Uma declaração de fé baseada unicamente nas Escrituras Sagradas.
             </p>
         </div>
@@ -346,33 +356,33 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Belief Cards -->
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">A Bíblia Sagrada</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">É a Palavra de Deus, verbalmente inspirada, infalível e nossa única fonte de revelação e autoridade divina.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-1-title">A Bíblia Sagrada</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-1-desc">É a Palavra de Deus, verbalmente inspirada, infalível e nossa única fonte de revelação e autoridade divina.</p>
             </div>
             
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">A Trindade</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">Cremos em um só Deus, eternamente existente em três Pessoas distintas: o Pai, o Filho e o Espírito Santo.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-2-title">A Trindade</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-2-desc">Cremos em um só Deus, eternamente existente em três Pessoas distintas: o Pai, o Filho e o Espírito Santo.</p>
             </div>
 
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">Jesus Cristo</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">É plenamente Deus e plenamente Homem. Viveu sem pecado, morreu na cruz para expiar nossos pecados, ressuscitou corporalmente, ascendeu ao Céu e voltará em breve.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-3-title">Jesus Cristo</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-3-desc">É plenamente Deus e plenamente Homem. Viveu sem pecado, morreu na cruz para expiar nossos pecados, ressuscitou corporalmente, ascendeu ao Céu e voltará em breve.</p>
             </div>
 
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">Salvação pela Graça</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">Toda pessoa é pecadora e precisa de salvação. A salvação é um dom gratuito de Deus, obtida exclusivamente pelo arrependimento dos pecados e pela fé nO Senhor Jesus Cristo, não por obras ou religiosidade da pessoa em si.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-4-title">Salvação pela Graça</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-4-desc">Toda pessoa é pecadora e precisa de salvação. A salvação é um dom gratuito de Deus, obtida exclusivamente pelo arrependimento dos pecados e pela fé nO Senhor Jesus Cristo, não por obras ou religiosidade da pessoa em si.</p>
             </div>
 
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">Batismo e Ceia</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">Praticamos o batismo por imersão para os crentes já salvos. Celebramos a Ceia dO Senhor como nossa reunião de adoração aO Senhor Jesus por excelência em Sua memória.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-5-title">Batismo e Ceia</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-5-desc">Praticamos o batismo por imersão para os crentes já salvos. Celebramos a Ceia dO Senhor como nossa reunião de adoração aO Senhor Jesus por excelência em Sua memória.</p>
             </div>
 
             <div class="glass p-8 rounded-2xl belief-card hover:-translate-y-2 transition-transform duration-300">
-                <h4 class="text-xl font-display font-bold mb-3 text-ink">O Destino Eterno</h4>
-                <p class="text-sm text-ink-light leading-relaxed font-medium">Cremos na ressurreição de todos os homens; os salvos para a vida eterna e os perdidos para a condenação eterna.</p>
+                <h4 class="text-xl font-display font-bold mb-3 text-ink" data-i18n="cb-6-title">O Destino Eterno</h4>
+                <p class="text-sm text-ink-light leading-relaxed font-medium" data-i18n="cb-6-desc">Cremos na ressurreição de todos os homens; os salvos para a vida eterna e os perdidos para a condenação eterna.</p>
             </div>
         </div>
     </section>
@@ -386,12 +396,12 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-20">
-                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink">Junte-se a nós</h2>
-                <p class="text-ink-light text-lg mb-10 font-medium">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-ink" data-i18n="ft-title">Junte-se a nós</h2>
+                <p class="text-ink-light text-lg mb-10 font-medium" data-i18n="ft-desc">
                     Todos os verdadeiros crentes, salvos pela fé em Cristo, formam uma unidade indivisível (a Igreja). Gostaríamos muito de ter você adorando a Deus em comunhão conosco!
                 </p>
                 <a href="https://wa.me/5541992842010" target="_blank" class="inline-flex items-center gap-2 bg-ink text-parchment px-8 py-4 rounded-full font-semibold hover:bg-ink-light transition-all shadow-[0_0_30px_rgba(44,40,32,0.15)]">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> Fale conosco pelo WhatsApp
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> <span data-i18n="ft-btn-whats">Fale conosco pelo WhatsApp</span>
                 </a>
             </div>
 
@@ -400,27 +410,27 @@
                     <div class="w-10 h-10 bg-ink/5 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 border border-ink/10">
                         <i data-lucide="clock" class="text-ink-light w-5 h-5"></i>
                     </div>
-                    <h5 class="font-bold text-ink mb-2">Horários das Reuniões</h5>
-                    <p class="text-sm text-ink-light font-medium">Sábado, 19:30 - Oração e estudo bíblico</p>
-                    <p class="text-sm text-ink-light font-medium">Domingo, 09:00 - Ceia dO Senhor</p>
-                    <p class="text-sm text-ink-light font-medium">Domingo, 10:30 - Pregação da Palavra</p>
+                    <h5 class="font-bold text-ink mb-2" data-i18n="ft-horarios-title">Horários das Reuniões</h5>
+                    <p class="text-sm text-ink-light font-medium" data-i18n="ft-horario-1">Sábado, 19:30 - Oração e estudo bíblico</p>
+                    <p class="text-sm text-ink-light font-medium" data-i18n="ft-horario-2">Domingo, 09:00 - Ceia dO Senhor</p>
+                    <p class="text-sm text-ink-light font-medium" data-i18n="ft-horario-3">Domingo, 10:30 - Pregação da Palavra</p>
                 </div>
                 <div class="text-center md:text-left">
                     <div class="w-10 h-10 bg-ink/5 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 border border-ink/10">
                         <i data-lucide="map-pin" class="text-ink-light w-5 h-5"></i>
                     </div>
-                    <h5 class="font-bold text-ink mb-2">Endereço</h5>
-                    <p class="text-sm text-ink-light font-medium">R. Arcésio de Barros Lima, 916</p>
-                    <p class="text-sm text-ink-light font-medium">Tatuquara, Curitiba - PR</p>
+                    <h5 class="font-bold text-ink mb-2" data-i18n="ft-endereco-title">Endereço</h5>
+                    <p class="text-sm text-ink-light font-medium" data-i18n="ft-endereco-1">R. Arcésio de Barros Lima, 916</p>
+                    <p class="text-sm text-ink-light font-medium" data-i18n="ft-endereco-2">Tatuquara, Curitiba - PR</p>
                 </div>
                 <div class="text-center md:text-left">
                     <div class="w-10 h-10 bg-ink/5 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-4 border border-ink/10">
                         <i data-lucide="mail" class="text-ink-light w-5 h-5"></i>
                     </div>
-                    <h5 class="font-bold text-ink mb-2">Contato</h5>
+                    <h5 class="font-bold text-ink mb-2" data-i18n="ft-contato-title">Contato</h5>
                     <p class="text-sm text-ink-light font-medium">diogofukuoka85@gmail.com</p>
                     <p class="text-sm text-ink-light font-medium">(41) 99284-2010</p>
-                    <p class="text-sm text-ink-light font-medium mt-1">ou clique no ícone do Whatsapp</p>
+                    <p class="text-sm text-ink-light font-medium mt-1" data-i18n="ft-contato-ou">ou clique no ícone do Whatsapp</p>
                 </div>
             </div>
 
@@ -439,7 +449,7 @@
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-sm text-ink-light font-medium">
-                <p>&copy; 2026 Igreja Local. Todos os direitos reservados.</p>
+                <p data-i18n="ft-copyright">&copy; 2026 Igreja Local. Todos os direitos reservados.</p>
                 <div class="font-display text-lg font-bold text-ink mt-4 md:mt-0">CRISTÃOS</div>
             </div>
         </div>
